@@ -17,13 +17,52 @@
             "name": "Морской герой",
             "description": "Как аквамен, но не из DC",
             "element": "water"
+        },
+        {
+            "name": "Антон",
+            "description": "Шось вмію",
+            "element": "fire",
+            "id": "b7f4cc91-964d-4443-86d0-c62c48452068"
+        },
+        {
+            "name": "Clicker",
+            "description": "Something",
+            "element": "water",
+            "id": "bb87b6d7-fa50-438c-bea2-44cf085d9089"
+        },
+        {
+            "name": "ChessPro",
+            "description": "Pro CHESS",
+            "element": "fire",
+            "id": "93a376dc-3718-4f2d-aa09-9ffcd17bcb51"
+        },
+        {
+            "name": "aawwsd",
+            "description": "w",
+            "element": "wind",
+            "id": "39ddc25e-9029-4f9d-912a-122128197f98"
         }
     ],
     "filters": [
-        "all",
-        "fire",
-        "water",
-        "wind",
-        "earth"
+        {
+            "name": "all",
+            "label": "Все"
+        },
+        {
+            "name": "fire",
+            "label": "Огонь"
+        },
+        {
+            "name": "water",
+            "label": "Вода"
+        },
+        {
+            "name": "wind",
+            "label": "Ветер"
+        },
+        {
+            "name": "earth",
+            "label": "Земля"
+        }
     ]
 }
