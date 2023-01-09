@@ -20,6 +20,13 @@ export const heroesFetchingError = () => {
 export const createHero = (hero) => {
   return {
     type: "HERO_CREATED",
-    payload : hero
+    payload: hero,
+  };
+};
+
+export const deleteHero = (id) => {
+  return {
+    type: "DELETING_HERO",
+    payload: id,
   };
 };

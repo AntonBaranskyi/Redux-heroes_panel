@@ -1,4 +1,4 @@
-
+import { v4 as uuidv4 } from "uuid";
 
 import { useState, useEffect } from "react";
 import { useHttp } from "../../hooks/http.hook";
@@ -29,7 +29,11 @@ const HeroesFilters = () => {
                 "btn-secondary": item.name === "earth",
                 "btn-outline-dark": item.name === "all",
               });
-              return <button className={btnClass}>{item.label}</button>;
+              return (
+                <button key={uuidv4()} className={btnClass}>
+                  {item.label}
+                </button>
+              );
             })}
         </div>
       </div>
