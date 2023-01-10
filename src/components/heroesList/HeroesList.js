@@ -12,7 +12,9 @@ import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from "../spinner/Spinner";
 
 const HeroesList = () => {
-  const { heroes, heroesLoadingStatus } = useSelector((state) => state);
+  const { filteredHeroes, heroes, heroesLoadingStatus } = useSelector(
+    (state) => state
+  );
   const dispatch = useDispatch();
   const { request } = useHttp();
 
@@ -52,7 +54,9 @@ const HeroesList = () => {
     });
   };
 
-  const elements = renderHeroesList(heroes);
+  const elements = renderHeroesList(
+    filteredHeroes.length > 0 ? filteredHeroes : heroes
+  );
   return <ul>{elements}</ul>;
 };
 

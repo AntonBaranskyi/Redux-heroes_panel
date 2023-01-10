@@ -1,7 +1,8 @@
 const initialState = {
   heroes: [],
   heroesLoadingStatus: "idle",
-  filters: [],
+  filters: "all",
+  filteredHeroes: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         heroes: action.payload,
         heroesLoadingStatus: "idle",
+
+        filteredHeroes:
+          state.filters === "all"
+            ? state.heroes
+            : state.heroes.filter((item) => item.element === state.filters),
       };
     case "HEROES_FETCHING_ERROR":
       return {
@@ -28,9 +34,16 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         newHeroList,
+
+        filteredHeroes:
+          state.filters === "all"
+            ? newHeroList
+            : newHeroList.filter((item) => item.element === state.filters),
       };
     case "DELETING_HERO":
-      const index = state.heroes.findIndex((hero) => hero.id === action.payload);
+      const index = state.heroes.findIndex(
+        (hero) => hero.id === action.payload
+      );
 
       const before = state.heroes.slice(0, index);
       const after = state.heroes.slice(index + 1);
@@ -38,6 +51,15 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         heroes: newArr,
+      };
+    case "FILTER_HERO":
+      return {
+        ...state,
+        filters: action.payload,
+        filteredHeroes:
+          action.payload === "all"
+            ? state.heroes
+            : state.heroes.filter((item) => item.element === action.payload),
       };
     default:
       return state;

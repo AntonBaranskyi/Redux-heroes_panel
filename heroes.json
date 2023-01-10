@@ -11,6 +11,18 @@
       "description": "Pro CHESS",
       "element": "fire",
       "id": "93a376dc-3718-4f2d-aa09-9ffcd17bcb51"
+    },
+    {
+      "name": "Antonio",
+      "description": "Turn apple to dog",
+      "element": "wind",
+      "id": "f84c8d6c-29f3-433d-bedb-19245276d2d1"
+    },
+    {
+      "name": "Andretan",
+      "description": "Nothing",
+      "element": "earth",
+      "id": "1d3e1b1a-cd54-4fa9-af75-edd026b810cf"
     }
   ],
   "filters": [

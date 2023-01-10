@@ -30,3 +30,10 @@ export const deleteHero = (id) => {
     payload: id,
   };
 };
+
+export const filterHero = (filter) => {
+  return {
+    type: "FILTER_HERO",
+    payload: filter,
+  };
+};

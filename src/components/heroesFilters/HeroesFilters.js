@@ -3,9 +3,12 @@ import { v4 as uuidv4 } from "uuid";
 import { useState, useEffect } from "react";
 import { useHttp } from "../../hooks/http.hook";
 import classNames from "classnames/bind";
+import { filterHero } from "../../actions";
+import { useDispatch } from "react-redux";
 
 const HeroesFilters = () => {
   const { request } = useHttp();
+  const dispatch = useDispatch();
   const [filters, setFilters] = useState();
   useEffect(() => {
     request("http://localhost:3001/filters").then(setFilter);
@@ -30,7 +33,7 @@ const HeroesFilters = () => {
                 "btn-outline-dark": item.name === "all",
               });
               return (
-                <button key={uuidv4()} className={btnClass}>
+                <button onClick={()=> dispatch(filterHero(item.name))} key={uuidv4()} className={btnClass}>
                   {item.label}
                 </button>
               );
