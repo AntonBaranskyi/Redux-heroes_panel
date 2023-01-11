@@ -1,28 +1,28 @@
 {
   "heroes": [
     {
-      "name": "Clicker",
-      "description": "Something",
-      "element": "water",
-      "id": "bb87b6d7-fa50-438c-bea2-44cf085d9089"
-    },
-    {
-      "name": "ChessPro",
-      "description": "Pro CHESS",
-      "element": "fire",
-      "id": "93a376dc-3718-4f2d-aa09-9ffcd17bcb51"
-    },
-    {
       "name": "Antonio",
       "description": "Turn apple to dog",
       "element": "wind",
       "id": "f84c8d6c-29f3-433d-bedb-19245276d2d1"
     },
     {
-      "name": "Andretan",
-      "description": "Nothing",
-      "element": "earth",
-      "id": "1d3e1b1a-cd54-4fa9-af75-edd026b810cf"
+      "name": "Антон",
+      "description": "HERO",
+      "element": "fire",
+      "id": "cf5ecd8e-206d-46fb-845e-92894c1a19ef"
+    },
+    {
+      "name": "Air bander",
+      "description": "aga",
+      "element": "wind",
+      "id": "13364c89-a019-40e8-89e7-d971b6b3d525"
+    },
+    {
+      "name": "Katara",
+      "description": "Water",
+      "element": "water",
+      "id": "cd2e9417-60d2-4ee6-b047-ea8a79b9b6a6"
     }
   ],
   "filters": [
