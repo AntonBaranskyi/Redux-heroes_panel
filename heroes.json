@@ -1,12 +1,6 @@
 {
   "heroes": [
     {
-      "name": "Antonio",
-      "description": "Turn apple to dog",
-      "element": "wind",
-      "id": "f84c8d6c-29f3-433d-bedb-19245276d2d1"
-    },
-    {
       "name": "Антон",
       "description": "HERO",
       "element": "fire",

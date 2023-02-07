@@ -12,6 +12,7 @@ const HeroesFilters = () => {
   const [filters, setFilters] = useState();
   useEffect(() => {
     request("http://localhost:3001/filters").then(setFilter);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const setFilter = (answ) => {
